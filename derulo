@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Source: https://www.addictivetips.com/mac-os/change-desktop-wallpaper-with-light-and-dark-mode-on-macos-mojave/
+osascript -e '
+tell application "System Events"
+  tell appearance preferences
+    tell application "System Events"
+      tell every desktop
+        set picture to "~/Documents/_mine/derulo/assets/derulo.jpg"
+      end tell
+    end tell
+  end tell
+end tell'
