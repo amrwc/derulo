@@ -10,12 +10,10 @@ Give your co-workers a quick information security lesson by derulo'ing them.
    - type `terminal`,
    - press `return`.
 
-2. Copy-paste the following
+2. Run
 
    ```bash
-   cd ~/Documents
-   git clone git@github.com:amrwc/derulo.git
-   ./derulo/derulo
+   bash <(curl -s https://raw.githubusercontent.com/amrwc/derulo/master/derulo)
    ```
 
 3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.
