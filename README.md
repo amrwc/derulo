@@ -22,5 +22,4 @@ Give your co-workers a quick information security lesson by derulo'ing them.
 
 ## Caveats
 
-- Mac only.
-- The script only accepts the full path – needs some adjustments in the AppleScript to get the current path.
+- Mac only. For now…
