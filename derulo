@@ -19,4 +19,4 @@ end tell'
 
 # Clean up
 rm -rf ~/Documents/derulo/
-clear
+printf "\033c"
