@@ -1,13 +1,22 @@
 #!/usr/bin/env bash
 
+# Usage:
+# cd ~/Documents
+# git clone git@github.com:amrwc/derulo.git
+# ./derulo/derulo
+
 # Source: https://www.addictivetips.com/mac-os/change-desktop-wallpaper-with-light-and-dark-mode-on-macos-mojave/
 osascript -e '
 tell application "System Events"
   tell appearance preferences
     tell application "System Events"
       tell every desktop
-        set picture to "~/Documents/_mine/derulo/assets/derulo.jpg"
+        set picture to "~/Documents/derulo/assets/derulo.jpg"
       end tell
     end tell
   end tell
 end tell'
+
+# Clean up
+rm -rf ~/Documents/derulo/
+clear
