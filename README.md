@@ -13,16 +13,9 @@ Give your co-workers a quick information security lesson by derulo'ing them.
 2. Copy-paste the following
 
    ```bash
-   # Sabotage
    cd ~/Documents
    git clone git@github.com:amrwc/derulo.git
-   cd ./derulo
-   ./derulo
-
-   # Clean up
-   cd ..
-   rm -rf ./derulo
-   clear
+   ./derulo/derulo
    ```
 
 3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.
