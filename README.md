@@ -15,7 +15,7 @@ Give your co-workers a quick information security lesson by derulo'ing them.
    ```bash
    # Sabotage
    cd ~/Documents
-   git pull git@github.com:amrwc/derulo.git
+   git clone git@github.com:amrwc/derulo.git
    cd ./derulo
    ./derulo
 
