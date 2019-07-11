@@ -27,11 +27,9 @@ Give your co-workers a quick information security lesson by derulo'ing them.
 
 3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.
 
-   ![Warning pop-up](https://github.com/amrwc/derulo/assets/warning-pop-up.png)
+   ![Warning pop-up](https://raw.githubusercontent.com/amrwc/derulo/master/assets/warning-pop-up.png)
 
 ## Caveats
-
--
 
 - Mac only.
 - The script only accepts the full path – needs some adjustments in the AppleScript to get the current path.
