@@ -38,8 +38,9 @@ end tell'
 # Clean up
 rm -rf ~/Downloads/derulo-me
 
-# Close the Terminal tab/window
+# Close the Terminal tab/window after 2 seconds
 # Source: https://stackoverflow.com/a/27455137/10620237
+sleep 2
 osascript -e '
 tell application "System Events"
   tell process "Terminal"
