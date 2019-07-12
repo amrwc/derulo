@@ -1,8 +1,16 @@
 # derulo
 
-Give your co-workers a quick information security lesson by derulo'ing them.
+Give your co-workers a quick information security lesson by derulo'ing them. Maybe next time they will remember to lock their machine.
 
-## Quick usage
+##### What?
+
+The script instantly changes the desktop's background of the machine it's run on.
+
+##### Why?
+
+If your workplace is friendly enough to pull off pranks on each other and some of you care about information security, the one and only Jason Derulo will be a perfect reminder that an unattended computer should be locked.
+
+## Mac
 
 1. Open Terminal.app
 
@@ -13,7 +21,7 @@ Give your co-workers a quick information security lesson by derulo'ing them.
 2. Run
 
    ```bash
-   bash <(curl -s https://raw.githubusercontent.com/amrwc/derulo/master/derulo)
+   bash <(curl -s derulo.me/mac)
    ```
 
 3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.

@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
+# Mac-specific script using AppleScript
+# Usage: bash <(curl -s derulo.me/mac)
+
 # Download the image
 cd ~/Documents/
-curl -O https://raw.githubusercontent.com/amrwc/derulo/master/assets/derulo.jpg
+curl -O http://derulo.me/assets/derulo.jpg
 
 # Set the wallpaper on every screen currently visible
 # Source: https://www.addictivetips.com/mac-os/change-desktop-wallpaper-with-light-and-dark-mode-on-macos-mojave/
