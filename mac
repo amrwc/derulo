@@ -3,9 +3,24 @@
 # Mac-specific script using AppleScript
 # Usage: bash <(curl -s derulo.me/mac)
 
-# Download the image
-cd ~/Documents/
-curl -O http://derulo.me/assets/derulo.jpg
+# Define an array of image URLs
+images=(
+  [0]=https://i.ytimg.com/vi/YBWgqb3KIeA/maxresdefault.jpg
+  [1]=http://img.wennermedia.com/social/jason-derulo-zoom-f3ecf1b6-aef2-4e91-87ef-1828c48241f2.jpg
+  [2]=http://headlineplanet.com/home/wp-content/uploads/2017/03/Jason-Derulo-WBR-2.jpg
+  [3]=http://www.jasonderulo.com/sites/g/files/g2000004951/f/201506/interior_news_bg_1.jpg
+  [4]=https://wallpapercave.com/wp/wc1689784.jpg
+)
+
+# Make a temporary location and go there
+mkdir ~/Downloads/derulo-me && cd ~/Downloads/derulo-me
+
+# Get random number between 0 and 4 inclusive
+rand=$((RANDOM % 5))
+
+# Download a random image and name it accordingly
+imgName="derulo"$rand".jpg"
+curl -o "$imgName" ${images[$rand]}
 
 # Set the wallpaper on every screen currently visible
 # Source: https://www.addictivetips.com/mac-os/change-desktop-wallpaper-with-light-and-dark-mode-on-macos-mojave/
@@ -14,12 +29,20 @@ tell application "System Events"
   tell appearance preferences
     tell application "System Events"
       tell every desktop
-        set picture to "~/Documents/derulo.jpg"
+        set picture to "~/Downloads/derulo-me/'$imgName'"
       end tell
     end tell
   end tell
 end tell'
 
 # Clean up
-rm -f ~/Documents/derulo.jpg
-printf "\033c"
+rm -rf ~/Downloads/derulo-me
+
+# Close the Terminal tab/window
+# Source: https://stackoverflow.com/a/27455137/10620237
+osascript -e '
+tell application "System Events"
+  tell process "Terminal"
+    keystroke "w" using {command down}
+  end tell
+end tell'
