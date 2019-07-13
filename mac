@@ -1,7 +1,20 @@
 #!/usr/bin/env bash
 
-# Mac-specific script using AppleScript
-# Usage: bash <(curl -s derulo.me/mac)
+# Give your co-workers a quick information security lesson by derulo'ing them.
+# Maybe next time they will remember to lock their machine.
+# 
+# What?
+# The script instantly changes the desktop's background of the machine it's run on.
+# 
+# Why?
+# If your workplace is friendly enough to pull off pranks on each other and
+# some of you care about information security, the one and only Jason Derulo
+# will be a perfect reminder that an unattended computer should be locked.
+# 
+# Mac-specific; using snippets of AppleScript
+# 
+# Usage:
+# bash <(curl -s derulo.me/mac)
 
 # Define an array of image URLs
 images=(
@@ -12,6 +25,14 @@ images=(
   [4]=https://wallpapercave.com/wp/wc1689784.jpg
 )
 
+# Generate a UUID for the image name
+# NOTE: When an image with the same file name as the current desktop background
+#       is picked, the background won't change. Using a unique name every time
+#       solves the problem.
+# NOTE: The lack of file extension seems not to be an issue.
+# Source: https://serverfault.com/a/799198
+imgName="$(od -x /dev/urandom | head -1 | awk '{OFS="-"; print $2$3,$4,$5,$6,$7$8$9}')"
+
 # Make a temporary location and go there
 mkdir ~/Downloads/derulo-me && cd ~/Downloads/derulo-me
 
@@ -21,14 +42,12 @@ customImgUrl="$1"
 # If customImg is not empty...
 if [[ -n "$customImgUrl" ]]; then
   # Download the image and name it accordingly
-  imgName="derulo.jpg"
   curl -o "$imgName" "$customImgUrl"
 else
   # Get random number between 0 and 4 inclusive
   rand=$((RANDOM % 5))
 
   # Download a random image and name it accordingly
-  imgName="derulo"$rand".jpg"
   curl -o "$imgName" ${images[$rand]}
 fi
 
