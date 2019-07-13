@@ -15,6 +15,11 @@
 # 
 # Usage:
 # bash <(curl -s derulo.me/mac)
+# or:
+# curl -s derulo.me/mac | bash -s
+# 
+# Custom image:
+# curl -s derulo.me/mac | bash -s <url_to_img>
 
 # Define an array of image URLs
 images=(
