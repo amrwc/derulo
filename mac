@@ -15,12 +15,22 @@ images=(
 # Make a temporary location and go there
 mkdir ~/Downloads/derulo-me && cd ~/Downloads/derulo-me
 
-# Get random number between 0 and 4 inclusive
-rand=$((RANDOM % 5))
+# Store the URL passed as an argument
+customImgUrl="$1"
 
-# Download a random image and name it accordingly
-imgName="derulo"$rand".jpg"
-curl -o "$imgName" ${images[$rand]}
+# If customImg is not empty...
+if [[ -n "$customImgUrl" ]]; then
+  # Download the image and name it accordingly
+  imgName="derulo.jpg"
+  curl -o "$imgName" "$customImgUrl"
+else
+  # Get random number between 0 and 4 inclusive
+  rand=$((RANDOM % 5))
+
+  # Download a random image and name it accordingly
+  imgName="derulo"$rand".jpg"
+  curl -o "$imgName" ${images[$rand]}
+fi
 
 # Set the wallpaper on every screen currently visible
 # Source: https://www.addictivetips.com/mac-os/change-desktop-wallpaper-with-light-and-dark-mode-on-macos-mojave/
@@ -36,4 +46,4 @@ tell application "System Events"
 end tell'
 
 # Clean up
-rm -rf ~/Downloads/derulo-me && printf "\033c"
+cd ~/ && rm -rf ~/Downloads/derulo-me && printf "\033c"
