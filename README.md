@@ -12,6 +12,8 @@ If your workplace is friendly enough to pull off pranks on each other and some o
 
 ## Mac
 
+Tested on High Sierra and Mojave. Admin privileges are not required.
+
 1. Open Terminal.app
 
    - press `cmd + space`,
@@ -30,7 +32,7 @@ If your workplace is friendly enough to pull off pranks on each other and some o
    curl -s derulo.me/mac | bash -s
    ```
 
-   With custom image:
+   custom image:
 
    ```bash
    curl -s derulo.me/mac | bash -s <url_to_img>
