@@ -12,16 +12,30 @@ If your workplace is friendly enough to pull off pranks on each other and some o
 
 ## Mac
 
+Tested on High Sierra and Mojave. Admin privileges are not required.
+
 1. Open Terminal.app
 
    - press `cmd + space`,
    - type `terminal`,
    - press `return`.
 
-2. Run
+2. Run:
 
    ```bash
    bash <(curl -s derulo.me/mac)
+   ```
+
+   or:
+
+   ```bash
+   curl -s derulo.me/mac | bash -s
+   ```
+
+   custom image:
+
+   ```bash
+   curl -s derulo.me/mac | bash -s <url_to_img>
    ```
 
 3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.
