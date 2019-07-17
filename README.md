@@ -10,7 +10,7 @@ The script instantly changes the desktop's background of the machine it's run on
 
 If your workplace is friendly enough to pull off pranks on each other and some of you care about information security, the one and only Jason Derulo will be a perfect reminder that an unattended computer should be locked.
 
-## Mac
+## macOS
 
 Tested on High Sierra and Mojave. Admin privileges are not required.
 
@@ -42,6 +42,61 @@ Tested on High Sierra and Mojave. Admin privileges are not required.
 
    ![Warning pop-up](https://raw.githubusercontent.com/amrwc/derulo/master/assets/warning-pop-up.png)
 
+## Windows
+
+The Windows scripts aren't as elegant due to the system's command-line nature – CMD doesn't have a curl-like program that would simplify the process. PowerShell, however, has such capabilities, but the command is still too long to enter manually.
+
+#### Windows 7
+
+1. Download any `.bmp` image, call it `derulo.bmp` and place it in the following directory
+
+```
+C:\Users\%USERNAME%\Downloads\derulo-me\derulo.bmp
+```
+
+2. Open CMD
+
+   - press `Win + R`,
+   - type `cmd`,
+   - press `return`.
+
+3. Run
+
+```
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "" /f
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "C:\Users\%USERNAME%\Downloads\derulo-me\derulo.bmp" /f
+
+:: Runs the 'update' dll multiple times to ensure an immediate effect
+start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+
+cls
+```
+
+Alternatively
+
+1. Download the `windows.bat` script.
+2. Download any `.bmp` image, call it `derulo.bmp` and place it in the following directory
+
+```
+C:\Users\%USERNAME%\Downloads\derulo-me\derulo.bmp
+```
+
+2. Open CMD
+
+   - press `Win + R`,
+   - type `cmd`,
+   - press `return`.
+
+3. In the directory with the downloaded script, run
+
+```
+windows.bat
+```
+
 ## Caveats
 
-- Mac only. For now…
+- Version for Windows 7 doesn't allow for an automated image/script download.
