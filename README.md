@@ -44,15 +44,11 @@ Tested on High Sierra and Mojave. Admin privileges are not required.
 
 ## Windows
 
-The Windows scripts aren't as elegant due to the system's command-line nature – CMD doesn't have a curl-like program that would simplify the process. PowerShell, however, has such capabilities, but the command is still too long to enter manually.
+Default CMD doesn't have curl-like program to download a script and images, therefore this method is more verbose. The PowerShell command for Windows 10 will be more succinct, but most likely still too long to enter manually.
 
-#### Windows 7
+#### Windows 7 and Windows 10
 
-1. Download any `.bmp` image, call it `derulo.bmp` and place it in the following directory
-
-```
-C:\Users\%USERNAME%\Downloads\derulo-me\derulo.bmp
-```
+1. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`.
 
 2. Open CMD
 
@@ -62,41 +58,39 @@ C:\Users\%USERNAME%\Downloads\derulo-me\derulo.bmp
 
 3. Run
 
-```
-reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "" /f
-reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "C:\Users\%USERNAME%\Downloads\derulo-me\derulo.bmp" /f
+   ```PowerShell
+   :: NOTE: The script assumes that the image is in the default 'Downloads' directory.
+   reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "" /f
+   reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "C:\Users\%USERNAME%\Downloads\derulo.bmp" /f
 
-:: Runs the 'update' dll multiple times to ensure an immediate effect
-start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
-start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
-start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
-start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
-start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+   :: Runs the 'update' dll multiple times to ensure an immediate effect
+   start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+   start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+   start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+   start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
+   start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 
-cls
-```
+   :: Clear screen
+   cls
+   ```
 
-Alternatively
+**Alternatively**
 
-1. Download the `windows.bat` script.
-2. Download any `.bmp` image, call it `derulo.bmp` and place it in the following directory
+1. Save the `windows.bat` script locally.
+2. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`. Make sure it's placed in the same directory as the `windows.bat` script.
 
-```
-C:\Users\%USERNAME%\Downloads\derulo-me\derulo.bmp
-```
-
-2. Open CMD
+3. Open CMD
 
    - press `Win + R`,
    - type `cmd`,
    - press `return`.
 
-3. In the directory with the downloaded script, run
+4. In the directory with the downloaded script, run
 
-```
-windows.bat
-```
+   ```PowerShell
+   windows.bat
+   ```
 
 ## Caveats
 
-- Version for Windows 7 doesn't allow for an automated image/script download.
+- The Windows 7 version doesn't allow for an automated image/script download.
