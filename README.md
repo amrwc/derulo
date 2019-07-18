@@ -44,9 +44,11 @@ Tested on High Sierra and Mojave. Admin privileges are not required.
 
 ## Windows
 
-Default CMD doesn't have curl-like program to download a script and images, therefore this method is more verbose. The PowerShell command for Windows 10 will be more succinct, but most likely still too long to enter manually.
+CMD doesn't have curl-like program to download a script and images, therefore this method is more verbose. The PowerShell command for Windows 10 will be more succinct, but most likely still too long to enter manually.
 
-#### Windows 7 and Windows 10
+#### CMD/Batch script
+
+Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
 1. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`.
 
@@ -77,20 +79,11 @@ Default CMD doesn't have curl-like program to download a script and images, ther
 **Alternatively**
 
 1. Save the `windows.bat` script locally.
+
 2. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`. Make sure it's placed in the same directory as the `windows.bat` script.
 
-3. Open CMD
-
-   - press `Win + R`,
-   - type `cmd`,
-   - press `return`.
-
-4. In the directory with the downloaded script, run
-
-   ```PowerShell
-   windows.bat
-   ```
+3. Double-click the `windows.bat` script, or run it through CMD by typing the script's name after navigating to its directory.
 
 ## Caveats
 
-- The Windows 7 version doesn't allow for an automated image/script download.
+- The CMD version doesn't allow for an automated image/script download.
