@@ -12,7 +12,7 @@ If your workplace is friendly enough to pull off pranks on each other and some o
 
 ## macOS
 
-Tested on High Sierra and Mojave. Admin privileges are not required. Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc.
+Tested on High Sierra and Mojave. Admin privileges are not required. Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc. are supported.
 
 1. Open Terminal.app
 
