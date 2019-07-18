@@ -72,8 +72,7 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
    start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
    start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 
-   :: Clean up
-   del "C:\Users\%USERNAME%\Downloads\derulo.bmp"
+   :: Clear screen
    cls
    ```
 
@@ -87,4 +86,5 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
 ## Caveats
 
-- The CMD version doesn't allow for an automated image/script download.
+- The CMD/Batch version doesn't allow for an automated image/script download.
+- The CMD/Batch version leaves the `derulo.bmp` image behind.

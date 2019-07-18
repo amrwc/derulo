@@ -14,7 +14,7 @@
 :: Usage:
 :: 1. Download any '.bmp' image, call it 'derulo.bmp'. Make sure it's placed
 ::    in the same directory as the 'windows.bat' script.
-:: 2. Run 'windows.bat' in CMD.
+:: 2. Run 'windows.bat'.
 
 :: Turns off the output to the command-line
 @echo off
@@ -33,6 +33,5 @@ start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 
 :: Clean up
-del %CD%\derulo.bmp
-del %CD%\windows.bat
 cls
+del %CD%\windows.bat
