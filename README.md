@@ -46,7 +46,7 @@ Tested on High Sierra and Mojave. Admin privileges are not required.
 
 CMD doesn't have curl-like program to download a script and images, therefore this method is more verbose. The PowerShell command for Windows 10 will be more succinct, but most likely still too long to enter manually.
 
-#### CMD/Batch script
+### CMD/Batch script
 
 Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
@@ -72,7 +72,8 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
    start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
    start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 
-   :: Clear screen
+   :: Clean up
+   del "C:\Users\%USERNAME%\Downloads\derulo.bmp"
    cls
    ```
 

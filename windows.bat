@@ -32,5 +32,7 @@ start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 
-:: Clear screen
+:: Clean up
+del %CD%\derulo.bmp
+del %CD%\windows.bat
 cls
