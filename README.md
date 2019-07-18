@@ -12,7 +12,7 @@ If your workplace is friendly enough to pull off pranks on each other and some o
 
 ## macOS
 
-Tested on High Sierra and Mojave. Admin privileges are not required.
+Tested on High Sierra and Mojave. Admin privileges are not required. Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc.
 
 1. Open Terminal.app
 
@@ -36,7 +36,23 @@ Tested on High Sierra and Mojave. Admin privileges are not required.
 
    ```bash
    curl -s derulo.me/mac | bash -s <url_to_img>
+
+   # Example:
+   # curl -s derulo.me/mac | bash -s https://html5box.com/html5gallery/images/Waves_1024.jpg
    ```
+
+   custom image from disk:
+
+   ```bash
+   curl -s derulo.me/mac | bash -s file://$HOME/<path_to_img>
+
+   # Example:
+   # curl -s derulo.me/mac | bash -s file://$HOME/Downloads/derulo.bmp
+   # with absolute path:
+   # curl -s derulo.me/mac | bash -s file:///Users/john/Downloads/derulo.bmp
+   ```
+
+   _Please note that the script sometimes has to be run twice._
 
 3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.
 
@@ -58,7 +74,7 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
    - type `cmd`,
    - press `return`.
 
-3. Run
+3. Run:
 
    ```PowerShell
    :: NOTE: The script assumes that the image is in the default 'Downloads' directory.
@@ -86,5 +102,7 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
 ## Caveats
 
-- The CMD/Batch version doesn't allow for an automated image/script download.
-- The CMD/Batch version leaves the `derulo.bmp` image behind.
+- CMD/Batch version
+  - doesn't allow for an automated image/script download,
+  - only supports bitmaps (`.bmp` images),
+  - leaves the `derulo.bmp` image behind.
