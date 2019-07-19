@@ -14,6 +14,8 @@ If your workplace is friendly enough to pull off pranks on each other and some o
 
 Tested on High Sierra and Mojave. Admin privileges are not required. Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc. are supported.
 
+_Please note that the script sometimes has to be run twice._
+
 1. Open Terminal.app
 
    - press `cmd + space`,
@@ -52,15 +54,37 @@ Tested on High Sierra and Mojave. Admin privileges are not required. Common rast
    # curl -s derulo.me/mac | bash -s file:///Users/john/Downloads/derulo.bmp
    ```
 
-   _Please note that the script sometimes has to be run twice._
-
 3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.
 
    ![Warning pop-up](https://raw.githubusercontent.com/amrwc/derulo/master/assets/warning-pop-up.png)
 
 ## Windows
 
-CMD doesn't have curl-like program to download a script and images, therefore this method is more verbose. The PowerShell command for Windows 10 will be more succinct, but most likely still too long to enter manually.
+CMD doesn't have curl-like program to download a script and images, therefore this method is more verbose. The PowerShell version is more succinct, but still too long to enter manually.
+
+### PowerShell
+
+_Please note that in some more restricted environments the PowerShell method may not work. In such case, try the CMD/Batch method._
+
+<!-- NOTE: A PowerShell-only method goes here.
+
+**Alternatively** -->
+
+This method utilises PowerShell to download the required files, but still relies on the Batch script to mitigate potential restrictions around `.ps` files.
+
+1. Open CMD
+
+   - press `Win + R`,
+   - type `cmd`,
+   - press `return`.
+
+2. Run:
+
+   ```PowerShell
+   powershell Invoke-RestMethod -Uri http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp -OutFile derulo.bmp
+   powershell Invoke-RestMethod -Uri https://raw.githubusercontent.com/amrwc/derulo/master/windows.bat -OutFile windows.bat
+   windows.bat
+   ```
 
 ### CMD/Batch script
 
