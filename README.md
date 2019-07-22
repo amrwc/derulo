@@ -14,7 +14,7 @@ If your workplace is friendly enough to pull off pranks on each other and some o
 
 Tested on High Sierra and Mojave. Admin privileges are not required. Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc. are supported.
 
-_Please note that the script sometimes has to be run twice._
+_Please note that the script may have to be run more than once._
 
 1. Open Terminal.app
 
@@ -62,15 +62,17 @@ _Please note that the script sometimes has to be run twice._
 
 CMD doesn't have curl-like program to download a script and images, therefore this method is more verbose. The PowerShell version is more succinct, but still too long to enter manually.
 
+_Please note that the script may have to be run more than once._
+
 ### PowerShell
 
-_Please note that in some more restricted environments the PowerShell method may not work. In such case, try the CMD/Batch method._
+_In some more restricted environments the PowerShell method may not work. In such case, try one of the CMD methods below._
 
-<!-- NOTE: A PowerShell-only method goes here.
+#### CMD + PowerShell
 
-**Alternatively** -->
+Tested on Windows 10. Admin privileges are not required.
 
-This method utilises PowerShell to download the required files, but still relies on the Batch script to mitigate potential restrictions around `.ps` files.
+This method utilises PowerShell to download the required files, but relies on the batch script to mitigate potential restrictions around `.ps` files.
 
 1. Open CMD
 
@@ -81,14 +83,16 @@ This method utilises PowerShell to download the required files, but still relies
 2. Run:
 
    ```PowerShell
-   powershell Invoke-RestMethod -Uri http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp -OutFile derulo.bmp
-   powershell Invoke-RestMethod -Uri https://raw.githubusercontent.com/amrwc/derulo/master/windows.bat -OutFile windows.bat
-   windows.bat
+   powershell Invoke-RestMethod -Uri https://raw.githubusercontent.com/amrwc/derulo/master/powershell.bat -OutFile powershell.bat && powershell.bat
    ```
 
-### CMD/Batch script
+### CMD
 
 Tested on Windows 7 and Windows 10. Admin privileges are not required.
+
+_Please note that the script may have to be run more than once._
+
+#### Pure CMD
 
 1. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`.
 
@@ -116,7 +120,7 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
    cls
    ```
 
-**Alternatively**
+#### Local batch file
 
 1. Save the `windows.bat` script locally.
 
@@ -126,7 +130,8 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
 ## Caveats
 
-- CMD/Batch version
-  - doesn't allow for an automated image/script download,
-  - only supports bitmaps (`.bmp` images),
-  - leaves the `derulo.bmp` image behind.
+- Windows version
+  - leaves the `derulo.bmp` image behind,
+  - CMD/batch version
+    - doesn't allow for an automated image/script download,
+    - only supports bitmaps (`.bmp` images).
