@@ -84,7 +84,7 @@ This method utilises PowerShell to download the required files, but relies on th
 
    ```batch
    :: Pro tip: triple-click on the line below to quickly highlight it
-   powershell Invoke-RestMethod -Uri https://raw.githubusercontent.com/amrwc/derulo/master/powershell.bat -OutFile powershell.bat && powershell.bat
+   powershell Invoke-RestMethod -Uri http://derulo.me/powershell -OutFile powershell.bat && powershell.bat
    ```
 
 ### CMD only

@@ -12,12 +12,14 @@
 :: Windows-specific; amending current user's registry keys
 :: 
 :: Usage:
-:: On a Windows installation supporting PowerShell, run `powershell.bat`.
+:: On a Windows installation supporting PowerShell:
+:: 1. Rename the script to 'powershell.bat'.
+:: 2. Run 'powershell.bat'.
 
 :: Turns off the output to the command-line
 @echo off
 
-:: Deletes `derulo.bmp` in case it's already there
+:: Deletes 'derulo.bmp' in case it's already there
 :: %CD% -- current directory (where the script is located)
 del %CD%\derulo.bmp
 
