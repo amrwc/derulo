@@ -10,11 +10,11 @@ The script instantly changes the desktop's background of the machine it's run on
 
 If your workplace is friendly enough to pull off pranks on each other and some of you care about information security, the one and only Jason Derulo will be a perfect reminder that an unattended computer should be locked.
 
+_Please note that the scripts may have to be run more than once._
+
 ## macOS
 
 Tested on High Sierra and Mojave. Admin privileges are not required. Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc. are supported.
-
-_Please note that the script may have to be run more than once._
 
 1. Open Terminal.app
 
@@ -60,19 +60,15 @@ _Please note that the script may have to be run more than once._
 
 ## Windows
 
-CMD doesn't have curl-like program to download a script and images, therefore this method is more verbose. The PowerShell version is more succinct, but still too long to enter manually.
+CMD doesn't have curl-like program to download a script and images, therefore this method requires more steps. The PowerShell one-liner is more succinct, but still a bit too long to enter manually.
 
-_Please note that the script may have to be run more than once._
-
-### PowerShell
-
-_In some more restricted environments the PowerShell method may not work. In such case, try one of the CMD methods below._
-
-#### CMD + PowerShell
+### CMD + PowerShell
 
 Tested on Windows 10. Admin privileges are not required.
 
 This method utilises PowerShell to download the required files, but relies on the batch script to mitigate potential restrictions around `.ps1` files.
+
+_In some restricted environments the PowerShell method may not work. In such case, try one of the CMD methods below._
 
 1. Open CMD
 
@@ -90,8 +86,6 @@ This method utilises PowerShell to download the required files, but relies on th
 ### CMD only
 
 Tested on Windows 7 and Windows 10. Admin privileges are not required.
-
-_Please note that the script may have to be run more than once._
 
 #### Copy-paste
 
@@ -132,7 +126,6 @@ _Please note that the script may have to be run more than once._
 ## Caveats
 
 - Windows version
-  - leaves the `derulo.bmp` image behind,
-  - CMD/batch version
-    - doesn't allow for an automated image/script download,
-    - only supports bitmaps (`.bmp` images).
+  - only supports bitmaps (`.bmp` images),
+  - leaves the `derulo.bmp` image behind (it may be possible to delete it, but not immediately after the script is finished),
+  - the pure batch version doesn't allow for an automated image/script download.
