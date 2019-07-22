@@ -72,7 +72,7 @@ _In some more restricted environments the PowerShell method may not work. In suc
 
 Tested on Windows 10. Admin privileges are not required.
 
-This method utilises PowerShell to download the required files, but relies on the batch script to mitigate potential restrictions around `.ps` files.
+This method utilises PowerShell to download the required files, but relies on the batch script to mitigate potential restrictions around `.ps1` files.
 
 1. Open CMD
 
@@ -82,17 +82,18 @@ This method utilises PowerShell to download the required files, but relies on th
 
 2. Run:
 
-   ```PowerShell
+   ```batch
+   :: Pro tip: triple-click on the line below to quickly highlight it
    powershell Invoke-RestMethod -Uri https://raw.githubusercontent.com/amrwc/derulo/master/powershell.bat -OutFile powershell.bat && powershell.bat
    ```
 
-### CMD
+### CMD only
 
 Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
 _Please note that the script may have to be run more than once._
 
-#### Pure CMD
+#### Copy-paste
 
 1. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`.
 
@@ -104,7 +105,7 @@ _Please note that the script may have to be run more than once._
 
 3. Run:
 
-   ```PowerShell
+   ```batch
    :: NOTE: The script assumes that the image is in the default 'Downloads' directory.
    reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "" /f
    reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "C:\Users\%USERNAME%\Downloads\derulo.bmp" /f
