@@ -12,17 +12,21 @@
 :: Windows-specific; amending current user's registry keys
 :: 
 :: Usage:
-:: 1. Download any '.bmp' image, call it 'derulo.bmp'. Make sure it's placed
-::    in the same directory as the 'windows.bat' script.
-:: 2. Run 'windows.bat'.
+:: On a Windows installation supporting PowerShell, run `powershell.bat`.
 
 :: Turns off the output to the command-line
 @echo off
 
+:: Deletes `derulo.bmp` in case it's already there
+:: %CD% -- current directory (where the script is located)
+del %CD%\derulo.bmp
+
+:: Downloads derulo.bmp
+Powershell.exe -executionpolicy remotesigned "Invoke-RestMethod -Uri http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp -OutFile derulo.bmp"
+
 :: Sets the wallpaper to the one supplied
 :: Source: https://social.technet.microsoft.com/Forums/en-US/w7itproui/thread/72a9b4bf-071b-47cd-877d-0c0629a9eb90/#c58b97cd-3a91-4409-80aa-39d53ef638cf
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "" /f
-:: %CD% -- current directory (where the script is located)
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d %CD%\derulo.bmp /f
 
 :: Runs the 'update' dll multiple times to ensure an immediate effect
@@ -34,4 +38,4 @@ start "" /b rundll32.exe user32.dll,UpdatePerUserSystemParameters
 
 :: Clean up
 cls
-del %CD%\windows.bat
+del %CD%\powershell.bat
