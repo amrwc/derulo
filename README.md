@@ -80,7 +80,7 @@ _In some restricted environments the PowerShell method may not work. In such cas
 
    ```batch
    :: Pro tip: triple-click on the line below to quickly highlight it
-   powershell Invoke-RestMethod -Uri http://derulo.me/powershell -OutFile powershell.bat && powershell.bat
+   powershell Invoke-RestMethod -Uri derulo.me/powershell -OutFile powershell.bat && powershell.bat
    ```
 
 ### CMD only
