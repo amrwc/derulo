@@ -117,11 +117,11 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
 #### Local batch file
 
-1. Save the `windows.bat` script locally.
+1. Save the `cmd.bat` script locally.
 
-2. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`. Make sure it's placed in the same directory as the `windows.bat` script.
+2. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`. Make sure it's placed in the same directory as the `cmd.bat` script.
 
-3. Double-click the `windows.bat` script, or run it through CMD by typing the script's name after navigating to its directory.
+3. Double-click the `cmd.bat` script, or run it through CMD by typing the script's name after navigating to its directory.
 
 ## Caveats
 
