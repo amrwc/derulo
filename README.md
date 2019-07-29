@@ -25,33 +25,40 @@ Tested on High Sierra and Mojave. Admin privileges are not required. Common rast
 2. Run:
 
    ```bash
-   bash <(curl -s derulo.me/mac)
+   bash <(curl derulo.me/mac)
    ```
 
    or:
 
    ```bash
-   curl -s derulo.me/mac | bash -s
+   curl derulo.me/mac | bash
    ```
 
    custom image:
 
    ```bash
-   curl -s derulo.me/mac | bash -s <url_to_img>
+   curl derulo.me/mac | bash -s <url_to_img>
 
    # Example:
-   # curl -s derulo.me/mac | bash -s https://html5box.com/html5gallery/images/Waves_1024.jpg
+   # curl derulo.me/mac | bash -s https://html5box.com/html5gallery/images/Waves_1024.jpg
    ```
 
    custom image from disk:
 
    ```bash
-   curl -s derulo.me/mac | bash -s file://$HOME/<path_to_img>
+   curl derulo.me/mac | bash -s file://$HOME/<path_to_img>
 
    # Example:
-   # curl -s derulo.me/mac | bash -s file://$HOME/Downloads/derulo.bmp
+   # curl derulo.me/mac | bash -s file://$HOME/Downloads/derulo.bmp
    # with absolute path:
-   # curl -s derulo.me/mac | bash -s file:///Users/john/Downloads/derulo.bmp
+   # curl derulo.me/mac | bash -s file:///Users/john/Downloads/derulo.bmp
+   ```
+
+   You can add an `-s` flag to curl to avoid downloading the images twice. For instance:
+
+   ```bash
+   curl -s derulo.me/mac | bash
+   curl -s derulo.me/mac | bash -s file://$HOME/<path_to_img>
    ```
 
 3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.
