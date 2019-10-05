@@ -2,15 +2,15 @@
 
 Give your co-workers a quick information security lesson by derulo'ing them. Maybe next time they will remember to lock their machine.
 
-##### What?
+### What?
 
 The script instantly changes the desktop's background of the machine it's run on.
 
-##### Why?
+### Why?
 
-If your workplace is friendly enough to pull off pranks on each other and some of you care about information security, the one and only Jason Derulo will be a perfect reminder that an unattended computer should be locked.
+If your workplace is friendly enough to pull off pranks and some of you care about information security, the one and only Jason Derulo will be a perfect reminder of how quickly damage can be done and that an unattended computer should be locked.
 
-_Please note that the scripts may have to be run more than once._
+_Please note that the scripts may have to be run more than once for the changes to take effect._
 
 ## macOS
 
@@ -50,7 +50,7 @@ Tested on High Sierra and Mojave. Admin privileges are not required. Common rast
 
    # Example:
    # curl derulo.me/mac | bash -s file://$HOME/Downloads/derulo.bmp
-   # with absolute path:
+   # With an absolute path:
    # curl derulo.me/mac | bash -s file:///Users/john/Downloads/derulo.bmp
    ```
 
@@ -61,13 +61,13 @@ Tested on High Sierra and Mojave. Admin privileges are not required. Common rast
    curl -s derulo.me/mac | bash -s file://$HOME/<path_to_img>
    ```
 
-3. There may appear a warning pop-up, which you just have to dismiss by pressing `OK`.
+3. There may appear a permission-related pop-up, which you just have to dismiss by pressing `OK`.
 
    ![Warning pop-up](https://raw.githubusercontent.com/amrwc/derulo/master/assets/warning-pop-up.png)
 
 ## Windows
 
-CMD doesn't have curl-like program to download a script and images, therefore this method requires more steps. The PowerShell one-liner is more succinct, but still a bit too long to enter manually.
+CMD doesn't have curl-like program to download a script and images, therefore this method requires more steps. The PowerShell one-liner is more succinct, but still a bit too long to remember and type out.
 
 ### CMD + PowerShell
 
@@ -75,7 +75,7 @@ Tested on Windows 10. Admin privileges are not required.
 
 This method utilises PowerShell to download the required files, but relies on the batch script to mitigate potential restrictions around `.ps1` files.
 
-_In some restricted environments the PowerShell method may not work. In such case, try one of the CMD methods below._
+_In some restricted environments the PowerShell method may not work. In such case, try one of the CMD-only methods below._
 
 1. Open CMD
 
@@ -90,7 +90,7 @@ _In some restricted environments the PowerShell method may not work. In such cas
    powershell Invoke-RestMethod -Uri derulo.me/powershell -OutFile powershell.bat && powershell.bat
    ```
 
-### CMD only
+### CMD-only
 
 Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
