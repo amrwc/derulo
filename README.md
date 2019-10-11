@@ -12,9 +12,11 @@ If your workplace is friendly enough to pull off pranks and some of you care abo
 
 _Please note that the scripts may have to be run more than once for the changes to take effect._
 
+![Demo GIF](./assets/derulo-demo.gif)
+
 ## macOS
 
-Tested on High Sierra and Mojave. Admin privileges are not required. Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc. are supported.
+Tested on High Sierra, Mojave and Catalina. Admin privileges are not required. Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc. are supported.
 
 1. Open Terminal.app
 
