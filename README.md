@@ -20,7 +20,7 @@ Tested on High Sierra, Mojave and Catalina. Admin privileges are not required. C
 
 1. Open Terminal.app
 
-   - press `cmd + space`,
+   - press `cmd` + `space`,
    - type `terminal`,
    - press `return`.
 
@@ -81,7 +81,7 @@ _In some restricted environments the PowerShell method may not work. In such cas
 
 1. Open CMD
 
-   - press `Win + R`,
+   - press `Win` + `R`,
    - type `cmd`,
    - press `return`.
 
@@ -98,11 +98,11 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
 #### Copy-paste
 
-1. Download any `.bmp` image ([example derulo.bmp](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`.
+1. Download any `.bmp` image ([example](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`.
 
 2. Open CMD
 
-   - press `Win + R`,
+   - press `Win` + `R`,
    - type `cmd`,
    - press `return`.
 
