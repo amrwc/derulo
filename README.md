@@ -98,7 +98,7 @@ Tested on Windows 7 and Windows 10. Admin privileges are not required.
 
 #### Copy-paste
 
-1. Download any `.bmp` image ([example](http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp)), call it `derulo.bmp`.
+1. Download any `.bmp` image ([example](https://i7.putstuffonline.com/0rtEegbeDUI/putstuffonline.bmp)), call it `derulo.bmp`.
 
 2. Open CMD
 
