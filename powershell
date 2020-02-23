@@ -27,7 +27,7 @@
 del %CD%\derulo.bmp
 
 :: Download derulo.bmp
-Powershell.exe -executionpolicy remotesigned "Invoke-RestMethod -Uri http://nsfpl.com/wp-content/uploads/2015/03/jason-derulo.bmp -OutFile derulo.bmp"
+Powershell.exe -executionpolicy remotesigned "Invoke-RestMethod -Uri https://i7.putstuffonline.com/0rtEegbeDUI/putstuffonline.bmp -OutFile derulo.bmp"
 
 :: Set the wallpaper to the one supplied
 :: Source: https://social.technet.microsoft.com/Forums/en-US/w7itproui/thread/72a9b4bf-071b-47cd-877d-0c0629a9eb90/#c58b97cd-3a91-4409-80aa-39d53ef638cf
