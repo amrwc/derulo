@@ -1,0 +1,12 @@
+name: Validate Image URLs
+# TODO: Change the `on` trigger to `schedule`
+on: [push, pull_request]
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - shell: bash
+        run: ./bin/validate_urls
