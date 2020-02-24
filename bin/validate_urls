@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+readonly BMP_URL="https://i7.putstuffonline.com/0rtEegbeDUI/putstuffonline.bmp"
+readonly JPG_URLS=(
+	"https://i.ytimg.com/vi/YBWgqb3KIeA/maxresdefault.jpg"
+	"http://img.wennermedia.com/social/jason-derulo-zoom-f3ecf1b6-aef2-4e91-87ef-1828c48241f2.jpg"
+	"http://headlineplanet.com/home/wp-content/uploads/2017/03/Jason-Derulo-WBR-2.jpg"
+	"http://www.jasonderulo.com/sites/g/files/g2000004951/f/201506/interior_news_bg_1.jpg"
+	"https://wallpapercave.com/wp/wc1689784.jpg"
+)
+failed=()
+
+if curl "${BMP_URL}" -o derulo.bmp; then
+	[ $(file derulo.bmp | awk '{print $3}' | sed 's/,$//') = "bitmap" ] \
+		|| failed+=("${BMP_URL}")
+else
+	failed+=("${BMP_URL}")
+fi
+
+i=0
+for url in "${JPG_URLS[@]}"; do
+    if curl "${url}" -o "${i}.jpg"; then
+		[ $(file "${i}.jpg" | awk '{print $2}') = "JPEG" ] \
+			|| failed+=("${url}")
+	else
+		failed+=("${url}")
+	fi
+	i=$((i + 1))
+done
+
+if [ ! -z "${failed}" ]; then
+	printf "\nURLs to files that couldn't be downloaded or had wrong type:\n"
+	for failure in "${failed[@]}"; do
+		echo "${failure}"
+	done
+fi
