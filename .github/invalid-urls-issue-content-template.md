@@ -1,0 +1,1 @@
+One or more image URLs used throughout this repository has expired or the file type it leads to is wrong. Please find the relevant [GitHub Action](https://github.com/amrwc/derulo/actions) that opened this issue and see the `Run The Validation Script` step to find out which URLs need updating.
