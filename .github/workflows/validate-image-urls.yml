@@ -1,0 +1,32 @@
+name: Validate Image URLs
+on:
+  push:
+    paths-ignore:
+      - 'assets/*'
+      - '.gitattributes'
+      - 'CNAME'
+      - 'LICENCE'
+  schedule:
+    - cron: '0 11 * * 6'
+
+jobs:
+  validate:
+    name: Validate Image URLs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get The Repository
+        uses: actions/checkout@v1
+      - name: Run The Validation Script
+        shell: bash
+        run: ./bin/validate_image_urls
+      - name: Create New Issue
+        if: failure()
+        uses: peter-evans/create-issue-from-file@v2
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          content-filepath: .github/invalid-urls-issue-content-template.md
+          title: Update Image URLs
+          assignees: amrwc
+          labels: bug
+          project: derulo
+          project-column: To do
