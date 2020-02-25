@@ -29,7 +29,7 @@ for url in "${JPG_URLS[@]}"; do
 done
 
 if [ ! -z "${failed}" ]; then
-	printf "\nURLs to files that couldn't be downloaded or had wrong type:\n"
+	printf "\n\nURLs of files that couldn't be downloaded or had wrong type:\n"
 	for failure in "${failed[@]}"; do
 		echo "${failure}"
 	done
