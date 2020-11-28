@@ -7,6 +7,7 @@ readonly JPG_URLS=(
 	"http://headlineplanet.com/home/wp-content/uploads/2017/03/Jason-Derulo-WBR-2.jpg"
 	"http://www.jasonderulo.com/sites/g/files/g2000004951/f/201506/interior_news_bg_1.jpg"
 	"https://wallpapercave.com/wp/wc1689784.jpg"
+	"https://html5box.com/html5gallery/images/Waves_1024.jpg" # Used in readme as an example
 )
 failed=()
 
