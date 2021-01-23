@@ -23,8 +23,7 @@ to take effect._
 ## macOS
 
 Tested on High Sierra, Mojave and Catalina. Admin privileges are not required.
-Common raster image types, such as JPG, PNG, BMP, GIF (they'll be still), etc.
-are supported.
+Common raster image types, such as JPG, PNG, BMP, GIF, etc. are supported.
 
 1. Open Terminal.app
 
@@ -37,29 +36,22 @@ are supported.
    ```console
    curl derulo.me/mac | bash
 
-   # Custom image:
-   curl derulo.me/mac | bash -s <url_to_img>
-   # Example:
+   # Custom image from the web:
    curl derulo.me/mac | bash -s https://html5box.com/html5gallery/images/Waves_1024.jpg
 
-   # Image from disk:
-   curl derulo.me/mac | bash -s file://$HOME/<path_to_img>
-   # Example:
+   # Custom image from disk:
    curl derulo.me/mac | bash -s file://$HOME/Downloads/derulo.bmp
-   # With an absolute path:
    curl derulo.me/mac | bash -s file:///Users/john/Downloads/derulo.bmp
    ```
 
-3. There may appear a permission-related pop-up, which you just have to dismiss
-   by pressing `OK`.
+3. There may appear a permission-related pop-up, which you have to accept.
 
    ![macOS warning pop-up](https://raw.githubusercontent.com/amrwc/derulo/master/assets/warning-pop-up.png)
 
 ## Windows
 
-CMD doesn't have curl-like program to download a script and images out of the
-box, therefore this method requires more steps. The PowerShell one-liner is
-more succinct, but still a bit too long to remember and type out.
+CMD doesn't include a curl-like program out-of-the-box, therefore this method
+requires more steps. The PowerShell one-liner is more succinct.
 
 ### CMD + PowerShell
 
