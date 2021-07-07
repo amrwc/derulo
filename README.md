@@ -3,12 +3,12 @@
 Give your co-workers a quick information security lesson by derulo'ing them.
 Maybe next time they will remember to lock their machine.
 
-### What?
+## What?
 
 The script instantly changes the desktop's background of the machine it's run
 on.
 
-### Why?
+## Why?
 
 If your workplace is friendly enough to pull off pranks and some of you care
 about information security, the one and only Jason Derulo will be a perfect
@@ -34,14 +34,14 @@ Common raster image types, such as JPG, PNG, BMP, GIF, etc. are supported.
 2. Run the script
 
    ```console
-   curl derulo.me/mac | bash
+   curl https://raw.githubusercontent.com/amrwc/derulo/main/mac | bash
 
    # Custom image from the web:
-   curl derulo.me/mac | bash -s https://html5box.com/html5gallery/images/Waves_1024.jpg
+   curl https://raw.githubusercontent.com/amrwc/derulo/main/mac | bash -s https://html5box.com/html5gallery/images/Waves_1024.jpg
 
    # Custom image from disk:
-   curl derulo.me/mac | bash -s file://$HOME/Downloads/derulo.bmp
-   curl derulo.me/mac | bash -s file:///Users/john/Downloads/derulo.bmp
+   curl https://raw.githubusercontent.com/amrwc/derulo/main/mac | bash -s file://$HOME/Downloads/derulo.bmp
+   curl https://raw.githubusercontent.com/amrwc/derulo/main/mac | bash -s file:///Users/john/Downloads/derulo.bmp
    ```
 
 3. There may appear a permission-related pop-up, which you have to accept.
@@ -73,7 +73,7 @@ case, try one of the CMD-only methods below._
 
    ```batch
    :: Pro tip: triple-click on the line below to quickly highlight it
-   powershell Invoke-RestMethod -Uri derulo.me/powershell -OutFile derulo.bat && derulo.bat
+   powershell Invoke-RestMethod -Uri https://raw.githubusercontent.com/amrwc/derulo/main/powershell -OutFile derulo.bat && derulo.bat
    ```
 
 ### CMD-only
